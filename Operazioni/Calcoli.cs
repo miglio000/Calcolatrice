@@ -4,62 +4,48 @@ namespace Operazioni
 {
     public class Calcoli
     {
-        public static double Variabile(double n)
+        public static double Variabile()
         {
-            Console.WriteLine("Inserire il numero");
-            n = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Inserire il numero:");
+            double n = Convert.ToDouble(Console.ReadLine());
             return n;
         }
-        
-        }
+
+
         public static double Scelta(double a, double b)
         {
-            Console.WriteLine("Quale operazione vuoi eseguire?");
+            Console.WriteLine("Quale operazione vuoi eseguire?(somma=+, differenza=-, moltiplicazione=*; divisione=/).");
             string scelta = Convert.ToString(Console.ReadLine());
+            double risultato = 0;
 
-            /*switch (scelta)
+            switch (scelta)
             {
                 case "+":
                 case "somma":
-                    double somma = a + b;
-                    return somma;
+                    risultato = a + b;
                     break;
+
                 case "-":
                 case "differenza":
-                    double differenza = a - b;
-                    return differenza;
+                    risultato = a - b;
                     break;
+
                 case "*":
                 case "moltiplicazione":
-                    double moltiplicazione = a * b;
-                    return moltiplicazione;
+                    risultato = a * b;
                     break;
+
                 case "/":
                 case "divisione":
-                    double divisione = a / b;
-                    return divisione;
+                    risultato = a / b;
                     break;
+
                 default:
                     Console.WriteLine("Errore.");
                     break;
-            }*/
-            if (scelta == "somma" || scelta == "+")
-            {
-                double somma = a + b;
-                return somma;
-            }else if(scelta =="differenza" || scelta == "-")
-            {
-                double differenza = a - b;
-                return differenza;
-            }else if(scelta == "moltiplicazione" || scelta == "*")
-            {
-                double moltiplicazione = a * b;
-                return moltiplicazione;
-            }else if(scelta == "divisione" || scelta == "/")
-            {
-                double divisione = a / b;
-                return divisione;
             }
+            return risultato;
         }
+
     }
 }

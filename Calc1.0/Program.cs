@@ -6,10 +6,10 @@ namespace Calc1._0
     {
         static void Main(string[] args)
         {
-            double n1 = Calcoli.Variabile;
-            double n2 = Calcoli.Variabile;
-            string scelta = Calcoli.Scelta;
-
+            double n1 = Calcoli.Variabile();
+            double n2 = Calcoli.Variabile();
+            double risultato = Calcoli.Scelta(n1, n2);
+            Console.WriteLine($"{risultato}");
         }
     }
 }

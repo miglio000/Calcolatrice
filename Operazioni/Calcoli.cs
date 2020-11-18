@@ -10,13 +10,18 @@ namespace Operazioni
             double n = Convert.ToDouble(Console.ReadLine());
             return n;
         }
-
-
-        public static double Scelta(double a, double b)
+        public static string Operazione()
         {
             Console.WriteLine("Quale operazione vuoi eseguire?(somma=+, differenza=-, moltiplicazione=*; divisione=/).");
-            string scelta = Convert.ToString(Console.ReadLine());
-            double risultato = 0;
+            string scelta = Console.ReadLine();
+            return scelta;
+        }
+
+
+        public static double? Scelta(double a, double b,  string scelta)
+        {
+            
+            double? risultato = 0;
 
             switch (scelta)
             {

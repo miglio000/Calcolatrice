@@ -7,9 +7,10 @@ namespace Calc1._0
         static void Main(string[] args)
         {
             double n1 = Calcoli.Variabile();
+            string operatore = Calcoli.Operazione();
             double n2 = Calcoli.Variabile();
-            double risultato = Calcoli.Scelta(n1, n2);
-            Console.WriteLine($"{risultato}");
+            double? risultato = Calcoli.Scelta(n1, n2, operatore);
+            Console.WriteLine(risultato);
         }
     }
 }
